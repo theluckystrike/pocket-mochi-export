@@ -1,0 +1,14 @@
+/* Styles for Pocket Mochi Export. Obsidian loads this file while the plugin is enabled. */
+
+.pocket-mochi-export-section {
+	margin-bottom: var(--size-4-3);
+}
+
+.pocket-mochi-export-label {
+	font-weight: var(--font-semibold);
+	color: var(--text-muted);
+}
+
+.pocket-mochi-export-section ul {
+	margin: var(--size-4-1) 0 0;
+}
