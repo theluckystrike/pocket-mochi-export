@@ -3,6 +3,7 @@ import { sponsorsSettingItems } from './license/github-obsidian';
 import { DEFAULT_TAG, normalizeTag, parsePresets } from './mochi';
 import { PRO_UI, isPro } from './pro';
 import type PocketMochiExportPlugin from './main';
+import { helloSettingItems } from './hello/settings';
 
 export interface PocketMochiExportSettings {
 	/** Lines with this tag are card fronts. */
@@ -42,6 +43,11 @@ export class PocketMochiExportSettingTab extends PluginSettingTab {
 	}
 
 	getSettingDefinitions(): SettingDefinitionItem[] {
+		// The product rows, then the "More from NoteMods" card (packages/hello).
+		return [...this.productSettingDefinitions(), ...helloSettingItems()];
+	}
+
+	productSettingDefinitions(): SettingDefinitionItem[] {
 		const count = parsePresets(this.plugin.settings.presets).length;
 		return [
 			{

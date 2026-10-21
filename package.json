@@ -1,6 +1,6 @@
 {
 	"name": "pocket-mochi-export",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"private": true,
 	"description": "Export card tagged notes and their local images to a .mochi archive for Mochi.",
 	"main": "main.js",

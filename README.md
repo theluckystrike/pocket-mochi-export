@@ -2,7 +2,7 @@
 
 Pocket Mochi Export turns flashcards in your Obsidian notes into a `.mochi` file for the Mochi spaced repetition app. Mark the front of a card with a tag, write the back under it, and run one command. After a preview, the plugin writes one ZIP archive with the cards and their images into a vault folder. You then import that file in Mochi.
 
-The export works inside your vault. It sends no note text, note names or paths to a network host. The plugin uses no Node or Electron API, so the manifest does not mark it as desktop only. The automated tests ran on a desktop build only (see the FAQ).
+The export works inside your vault. It sends no note text, note names or paths to a network host. The plugin uses no Node or Electron API, so the manifest does not mark it as desktop only.
 
 ## Features
 
@@ -85,17 +85,17 @@ Copy `main.js`, `manifest.json` and `styles.css` from the plugin build into `<va
 
 If the note has no line with the card tag, a notice says "No cards found" and the plugin writes no file.
 
-The file explorer menu of a folder has the two Pro folder exports.
-
 <img src="https://raw.githubusercontent.com/theluckystrike/pocket-mochi-export/HEAD/docs/pocket-mochi-export.gif" alt="A card note is exported: the command runs, the preview opens, Export is selected and the file appears" width="720">
 
 ## Settings
+
+After a minor or major update, this plugin opens one What's new tab in the background. The tab and settings card suggest other NoteMods plugins and Zovo Chat and link to notemods.com for feedback ([privacy](https://notemods.com/privacy/)). The tab sends no data. Turn the tab off in Settings.
 
 | Setting | What it does |
 | --- | --- |
 | Card tag | The tag that marks a front. Default `#card`. You can type it with or without `#`. A tag with a space is refused and the default is used. |
 | Output folder | The vault folder for the `.mochi` files. Default `Mochi exports`. |
-| Presets (Pro) | One preset on each line: `name \| tag \| output folder \| deck name`. Lines that start with `//` are comments. |
+| Presets (Pro) | The presets from "Named presets" above. Lines that start with `//` are comments. |
 
 <img src="https://raw.githubusercontent.com/theluckystrike/pocket-mochi-export/HEAD/docs/settings.png" alt="The settings tab with card tag, output folder, presets and the Pro section" width="720">
 
@@ -111,7 +111,6 @@ No. The plugin reads notes and images. It writes only the new `.mochi` file and,
 
 ### What did you not test?
 
-- Import of the archive into the Mochi app.
 - The plugin on a phone or a tablet. The unit tests and the end-to-end test ran on desktop builds.
 - Notes with thousands of cards or very large images. We did not measure speed.
 - Images that a note links with a full path from another vault, and image file names that are the same apart from letter case.
