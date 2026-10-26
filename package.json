@@ -1,7 +1,6 @@
 {
 	"name": "pocket-mochi-export",
-	"repository": {"type": "git", "url": "theluckystrike/pocket-mochi-export.git"},
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"private": true,
 	"description": "Export card tagged notes and their local images to a .mochi archive for Mochi.",
 	"main": "main.js",

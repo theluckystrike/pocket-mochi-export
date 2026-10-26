@@ -4,7 +4,7 @@ import { createGitHubSponsors } from './license/github-obsidian';
 import { buildArchive } from './archive';
 import { archivePath, normalizeTag, parsePresets, planExport, type DeckMode, type ExportPlan, type Preset } from './mochi';
 import { confirmExport } from './preview';
-import { SPONSORS, bindPro, isPro, resetPro } from './pro';
+import { SPONSORS, bindPro, isPro, resetPro, proNotice } from './pro';
 import { DEFAULT_SETTINGS, PocketMochiExportSettingTab, normalizeSettings, type PocketMochiExportSettings } from './settings';
 import { setupHello } from './hello/index';
 import WHATS_NEW from './whats-new.json';
@@ -38,7 +38,7 @@ export function notesIn(folder: TFolder): TFile[] {
 }
 
 export function needsPro(feature: string): void {
-	new Notice(`${feature} is a pro feature. Sponsor on GitHub, then sign in from the plugin settings.`);
+	proNotice(`${feature} is a pro feature.`);
 }
 
 class PresetModal extends FuzzySuggestModal<Preset> {
