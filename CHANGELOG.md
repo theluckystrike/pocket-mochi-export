@@ -1,5 +1,11 @@
 # pocket-mochi-export
 
+## 1.1.2
+
+### Patch Changes
+
+- de36552: The presets Pro notice now says that presets are a Pro feature. The folder export Pro notices now write Pro with a capital P.
+
 ## 1.1.1
 
 ### Patch Changes

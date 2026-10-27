@@ -37,8 +37,9 @@ export function notesIn(folder: TFolder): TFile[] {
 	return out.sort((a, b) => (a.path < b.path ? -1 : a.path > b.path ? 1 : 0));
 }
 
-export function needsPro(feature: string): void {
-	proNotice(`${feature} is a pro feature.`);
+/** Shows the Pro notice. The lead is a full sentence, for example 'Presets are a Pro feature.'. */
+export function needsPro(lead: string): void {
+	proNotice(lead);
 }
 
 class PresetModal extends FuzzySuggestModal<Preset> {
@@ -181,7 +182,7 @@ export default class PocketMochiExportPlugin extends Plugin {
 	/** Pro: the notes of a folder and its subfolders. */
 	async exportFolder(folder: TFolder, mode: DeckMode): Promise<string | null> {
 		if (!isPro()) {
-			needsPro(mode === 'sub-decks' ? 'Folder export with sub-decks' : 'Folder export');
+			needsPro(mode === 'sub-decks' ? 'Folder export with sub-decks is a Pro feature.' : 'Folder export is a Pro feature.');
 			return null;
 		}
 		const name = folder.isRoot() ? this.app.vault.getName() : folder.name;
@@ -191,7 +192,7 @@ export default class PocketMochiExportPlugin extends Plugin {
 	/** Pro: tag, output folder and deck name from a named preset. */
 	exportWithPreset(file: TFile, preset: Preset): Promise<string | null> {
 		if (!isPro()) {
-			needsPro('Presets');
+			needsPro('Presets are a Pro feature.');
 			return Promise.resolve(null);
 		}
 		const tag = normalizeTag(preset.tag) || this.settings.tag;
@@ -202,7 +203,7 @@ export default class PocketMochiExportPlugin extends Plugin {
 
 	private choosePreset(file: TFile): void {
 		if (!isPro()) {
-			needsPro('Presets');
+			needsPro('Presets are a Pro feature.');
 			return;
 		}
 		const presets = parsePresets(this.settings.presets);

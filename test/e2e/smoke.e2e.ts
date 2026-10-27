@@ -85,7 +85,7 @@ describe(`${pluginId} smoke test`, function () {
 	it('folder export without Pro shows the Pro notice', async function () {
 		await obsidianPage.openFile(`${DIR}/Biology/Genetics.md`);
 		await browser.executeObsidianCommand(`${pluginId}:export-folder-subdecks`);
-		await browser.waitUntil(async () => (await lastNotice()).includes('is a pro feature'), { timeout: 20000 });
+		await browser.waitUntil(async () => (await lastNotice()).includes('Folder export with sub-decks is a Pro feature.'), { timeout: 20000 });
 		expect(await previewOpen()).toBe(false);
 	});
 });

@@ -235,9 +235,9 @@ describe('Pro features', () => {
 		expect(await t.plugin.exportFolder(folder, 'sub-decks')).toBeNull();
 		expect(await t.plugin.exportWithPreset(t.file('Bio/Cell.md'), { name: 'P', tag: '', folder: '', deck: '' })).toBeNull();
 		expect(t.shown).toEqual([
-			'Folder export is a pro feature. Sponsor on GitHub, then sign in from the plugin settings.',
-			'Folder export with sub-decks is a pro feature. Sponsor on GitHub, then sign in from the plugin settings.',
-			'Presets is a pro feature. Sponsor on GitHub, then sign in from the plugin settings.',
+			'Folder export is a Pro feature. Sponsor on GitHub, then sign in from the plugin settings.',
+			'Folder export with sub-decks is a Pro feature. Sponsor on GitHub, then sign in from the plugin settings.',
+			'Presets are a Pro feature. Sponsor on GitHub, then sign in from the plugin settings.',
 		]);
 		expect(t.app.vault.getAbstractFileByPath('Mochi exports')).toBeNull();
 	});
