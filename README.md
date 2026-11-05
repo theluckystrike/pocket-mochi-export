@@ -95,7 +95,7 @@ After a minor or major update, this plugin opens one What's new tab in the backg
 | --- | --- |
 | Card tag | The tag that marks a front. Default `#card`. You can type it with or without `#`. A tag with a space is refused and the default is used. |
 | Output folder | The vault folder for the `.mochi` files. Default `Mochi exports`. |
-| Presets (Pro) | The presets from "Named presets" above. Lines that start with `//` are comments. |
+| Presets (Pro) | The presets from "Named presets". Lines that start with `//` are comments. |
 
 <img src="https://raw.githubusercontent.com/theluckystrike/pocket-mochi-export/HEAD/docs/settings.png" alt="The settings tab with card tag, output folder, presets and the Pro section" width="720">
 
@@ -118,6 +118,8 @@ No. The plugin reads notes and images. It writes only the new `.mochi` file and,
 ## Payment, account and network
 
 The core features are free. Pro features need a GitHub Sponsors sponsorship of theluckystrike: $5 a month or more, or $15 once. A total payment of $15 meets the payment requirement for Pro without further payment. Sign-in and the checks below still apply. Your notes stay readable and editable with or without Pro.
+
+[One payment turns on Pro in every NoteMods plugin](https://notemods.com/pro/).
 
 GitHub handles the payment. Sponsor at https://github.com/sponsors/theluckystrike?frequency=one-time&metadata_source=pocket-mochi-export. You need no account for the free features. Pro needs the GitHub account that sponsors.
 
